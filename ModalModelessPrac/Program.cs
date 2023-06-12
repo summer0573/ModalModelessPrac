@@ -29,6 +29,12 @@ namespace ModalModelessPrac
             {
                 result = MessageBox.Show("내용", "제목", MessageBoxButtons.RetryCancel);
             } while (result == DialogResult.Retry);
+
+            if(result == DialogResult.Cancel)
+            {
+                MessageBox.Show("사용자가 취소하였습니다.", "알림",
+                    MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
     }
 }
