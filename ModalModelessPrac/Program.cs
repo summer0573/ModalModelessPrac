@@ -18,5 +18,17 @@ namespace ModalModelessPrac
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+        private static void Button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("내용");
+            MessageBox.Show("내용", "제목");
+
+            DialogResult result;
+            do
+            {
+                result = MessageBox.Show("내용", "제목", MessageBoxButtons.RetryCancel);
+            } while (result == DialogResult.Retry);
+        }
     }
 }
